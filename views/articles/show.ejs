@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,700i,800">
+</head>
+<body>
+    <div class="container mt-4 mb-4">
+        <h1 class="mb-2"><%= article.title %></h1>
+        <div class="text-muted mb-2">
+            <%= article.createdAt.toLocaleDateString() %>
+        </div>
+        <a href="/" class="btn btn-secondary">All Articles</a>
+        <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+
+        <div><%- article.sanitizedHtml %></div>
+    </div>
+</body>
+</html> 
